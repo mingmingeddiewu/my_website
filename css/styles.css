@@ -1574,7 +1574,7 @@ hr.fancy::before {
 }
 
 .pull-quote blockquote p {
-    font-weight : 400;
+    font-weight : 800;
     color       : var(--color-text-dark);
 }
 
@@ -3415,7 +3415,7 @@ img.u-pull-left {
 
 .about-info__text {
     padding     : var(--vspace-3_5) 10vw var(--vspace-2) 0;
-    margin-left : -4rem;
+    margin-left : 4rem;
 }
 
 .about-info__text .text-pretitle {
