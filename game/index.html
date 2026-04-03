@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廣東話歇後語挑戰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+    <h1 id="title">廣東話歇後語挑戰</h1>
+    
+    <div id="setup-screen">
+        <p style="font-size: 1.2rem; line-height: 1.6;">考考你對廣東話歇後語有幾深認識？<br>每題限時 20 秒，有 3 次機會。<br><br>使用提示會扣 <strong>0.5 分</strong>。</p>
+        <button onclick="startGame()">立即開始</button>
+    </div>
+
+    <div id="quiz-screen" style="display:none;">
+        <div id="progress-bar"></div>
+        <div id="timer">剩餘時間: 20s</div>
+        
+        <div id="question-area"><span id="q-text"></span> ...</div>
+        
+        <input type="text" id="user-input" placeholder="請輸入後半句..." autocomplete="off">
+        
+        <div class="btn-group">
+            <button id="submit-btn" onclick="checkAnswer()">提交答案</button>
+            <button id="hint-btn" class="hint-btn" onclick="getHint()">攞提示 (-0.5)</button>
+        </div>
+        
+        <div id="feedback"></div>
+        <div id="stats-row">
+            目前得分: <span id="current-score" style="font-weight:bold; color:var(--accent-color);">0</span> | 
+            剩餘嘗試: <span id="tries">3</span>
+        </div>
+    </div>
+
+    <div id="result-screen" style="display:none;">
+        <p style="margin:0; font-weight:bold;">你的總結分</p>
+        <div class="score-big" id="final-score">0</div>
+        <h2 id="congrats-msg"></h2>
+        <div id="review-area" style="overflow-x: auto;"></div>
+        <button onclick="location.reload()" style="margin-top: 30px;">再挑戰一次</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
