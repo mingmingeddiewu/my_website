@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>✊ ✋ ✌️</h1>
+        <h1>Rock, Paper, Scissors</h1>
+        <p class="subtitle">Play 5 rounds — Who will win!!</p>
+
+        <p class="round-info" id="round-info">Round 1 of 5</p>
+
+        <!-- Choice buttons -->
+                
+        <div class="choices" id="choices">
+            <button class="choice-btn" onclick="play(0)">
+                <span class="emoji">📄</span>
+                <span class="name">Paper</span>
+            </button>
+            <button class="choice-btn" onclick="play(1)">
+                <span class="emoji">✂️</span>
+                <span class="name">Scissors</span>
+            </button>
+            <button class="choice-btn" onclick="play(2)">
+                <span class="emoji">🪨</span>
+                <span class="name">Rock</span>
+            </button>
+        </div>
+
+        <!-- Round result -->
+        <div class="result-area" id="result-area">
+            <p class="result-picks" id="result-picks"></p>
+            <p class="result-message" id="result-message">Pick a hand to start!</p>
+        </div>
+
+<!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="score-box">
+                <div class="label">You</div>
+                <div class="value" id="you-score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="label">Robot</div>
+                <div class="value" id="comp-score">0</div>
+            </div>
+        </div>
+
+
+        <!-- Final result (hidden until game ends) -->
+        <div id="final-area"></div>
+
+        <!-- Round log -->
+        <div class="log-container" id="log-container" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
